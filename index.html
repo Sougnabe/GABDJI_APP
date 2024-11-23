@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyHelper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>DailyHelper</h1>
+        <p>Get your daily dose of practical tools: weather, exchange rates, and inspiration!</p>
+    </header>
+    <main>
+        <!-- Weather Section -->
+        <section>
+            <h2>Weather Forecast</h2>
+            <label for="city">Enter City:</label>
+            <input type="text" id="city" placeholder="e.g., New York">
+            <button onclick="getWeather()">Get Weather</button>
+            <div id="weatherResult" class="result"></div>
+        </section>
+
+        <!-- Currency Exchange Section -->
+        <section>
+            <h2>Currency Exchange</h2>
+            <label for="fromCurrency">From:</label>
+            <select id="fromCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="XAF">XAF</option>
+            </select>
+            <label for="toCurrency">To:</label>
+            <select id="toCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="XAF">XAF</option>
+            </select>
+            <button onclick="getExchangeRate()">Get Exchange Rate</button>
+            <div id="exchangeResult" class="result"></div>
+        </section>
+
+        <!-- Quote Section -->
+        <section>
+            <h2>Inspiration of the Day</h2>
+            <button onclick="getQuote()">Get a Quote</button>
+            <div id="quoteResult" class="result"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
