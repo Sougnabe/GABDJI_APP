@@ -54,7 +54,7 @@ async function getWeather() {
             const quoteResult = document.getElementById('quoteResult');
             quoteResult.textContent = "Loading...";
             try {
-                const response = await fetch('http://api.quotable.io/random');
+                const response = await fetch('https://api.quotable.io/random');
                 const data = await response.json();
                 quoteResult.textContent = `"${data.content}" - ${data.author}`;
             } catch (error) {
